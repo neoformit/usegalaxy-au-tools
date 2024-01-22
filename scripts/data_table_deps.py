@@ -4,7 +4,7 @@ import requests
 from xml.etree import ElementTree as ET
 
 
-def fetch_data_tables(gxid):
+def fetch(gxid):
     """Fetch data table requirement from toolshed XML files.
 
     Build URL like:
@@ -28,6 +28,6 @@ def fetch_data_tables(gxid):
 
 if __name__ == '__main__':
     gxid = 'toolshed.g2.bx.psu.edu/repos/iuc/bakta/bakta'
-    tables = fetch_data_tables(gxid)
+    tables = fetch(gxid)
     print("Tables:")
     print(tables)
